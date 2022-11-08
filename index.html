@@ -19,34 +19,38 @@
         <h1 class="display-3 text-light text-center">Kostky</h1>
     </header>
     <main class="container">
-        <div class="m-3">
-            <img src="img/kostka6.png" alt="kostka" id="dice">
-        </div>
-        
-        
-        <div  id="player1" class=" player1 active "><h2>Hráč 1 </h2></div>
-        <p>
-            <div>
-                <button class="btn btn-danger" id="play">HREJ</button>
+
+
+        <div class="row">
+
+            <div class="col-sm-3 mt-5">
+                <div id="player1" class=" player1  active col-md-12 ">
+                    <h2 class="text-center">Hráč 1 </h2>
+                </div>
+                <div id="result" class="alert alert-warning">Výsledky hráče 1</div>
             </div>
-        </p>
-        <div id="result" class="alert alert-warning">Výsledky hráče 1</div>
-        <div id="player2" class="player2">
-            <h2>Hráč 2</h2>
-        </div>
-        <div>
-            <button class="btn btn-danger" id="play1">HREJ</button>
-        </div>
-        <div id="result2" class="alert alert-warning">Výsledky hráče 2</div>
+            <div class="col-sm-5 mt-5 grid">
+                <div class="m-3">
+                    <img src="img/kostka6.png" alt="kostka" id="dice">
+                </div>
+                <div>
+                    <button class="btn btn-danger" id="play">HREJ</button>
+                </div>
+            </div>
 
-        <p>
-        <div>
-            <button class="btn btn-danger" id="change">Změna hráče</button>
+            <div class="col-sm-3 mt-5">
+                <div id="player2" class="player2 col-md-12">
+                    <h2 class="text-center">Hráč 2</h2>
+                </div>
+                <div id="result2" class="alert alert-warning">Výsledky hráče 2</div>
+            </div>
+
+
+
         </div>
-        </p>
-        <p>popis: hra pro dva hráče kteří postupně hází kostkou a vyhrává ten který má součet hodů větší nebo stejný 25</p>
+
+        
     </main>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

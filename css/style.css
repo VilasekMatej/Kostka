@@ -3,3 +3,7 @@
 
     border-right: -3000px;
 }
+.grid{
+    display: grid;
+    place-items: center;
+}
