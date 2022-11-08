@@ -62,7 +62,7 @@ function stats() {
     results += `<p>Součet: ${sum()} </p>`;
     if (sum() >= 25) {
         alert("vyhrál hráč číslo 1");
-        document. location. reload()
+        document.location.reload()
     }
     results += `<p>Průměr hodů: ${sum() / rounds.length} </p>`;
     return results;
@@ -75,7 +75,7 @@ function stats1() {
     results += `<p>Součet: ${sum1()} </p>`;
     if (sum1() >= 25) {
         alert("vyhrál hráč číslo 2");
-        document. location. reload()
+        document.location.reload()
     }
     results += `<p>Průměr hodů: ${sum1() / roundss.length} </p>`;
     return results;
