@@ -60,8 +60,9 @@ function stats() {
     results += `<p>Přehled hodů: ${rounds} </p>`;
     results += `<p>Počet hodů: ${rounds.length} </p>`;
     results += `<p>Součet: ${sum()} </p>`;
-    if (sum() > 25) {
+    if (sum() >= 25) {
         alert("vyhrál hráč číslo 1");
+        document. location. reload()
     }
     results += `<p>Průměr hodů: ${sum() / rounds.length} </p>`;
     return results;
@@ -72,8 +73,9 @@ function stats1() {
     results += `<p>Přehled hodů: ${roundss} </p>`;
     results += `<p>Počet hodů: ${roundss.length} </p>`;
     results += `<p>Součet: ${sum1()} </p>`;
-    if (sum1() > 25) {
+    if (sum1() >= 25) {
         alert("vyhrál hráč číslo 2");
+        document. location. reload()
     }
     results += `<p>Průměr hodů: ${sum1() / roundss.length} </p>`;
     return results;
@@ -84,8 +86,7 @@ play.addEventListener('click', function () {
         
         if (!timer) {
             play.innerText = 'STOP'
-            timer = setInterval(animace, 40);
-            
+            timer = setInterval(animace, 40);     
         } else {
             play.innerText = 'HREJ';
             clearInterval(timer);
@@ -114,27 +115,13 @@ play.addEventListener('click', function () {
                 player = 0;
                 document.querySelector(".player2").classList.remove("active");
                 document.querySelector(".player1").classList.add("active");
+                
             }
         }
     }
 
 })
 
-/*play1.addEventListener('click', function() {
-    if (!timer) {
-        play.innerText = 'STOP'
-        timer = setInterval(animace, 40);
-    } else {
-        play.innerText = 'HREJ';
-        clearInterval(timer);
-        timer = false;
-        roundss.push(turn);
-        if(player === 1){
-            result2.innerHTML = stats1();
-        }
-        }
-})*/
 
-change.addEventListener('click', function () {
-    nextPlayer();
-})
+
+
